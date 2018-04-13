@@ -1,0 +1,15 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee"
+         version="2.5">
+
+    <servlet>
+        <servlet-name>BeerSelect</servlet-name>
+        <servlet-class>de.is2.demo.web.BeerSelect</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BeerSelect</servlet-name>
+        <url-pattern>/SelectBeer.do</url-pattern>
+    </servlet-mapping>
+</web-app>

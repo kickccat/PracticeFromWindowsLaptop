@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="BayerischeD3OMAdapterWSService" targetNamespace="http://omAdapter.bayerische.kwsoft.de/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:tns="http://omAdapter.bayerische.kwsoft.de/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://omAdapter.bayerische.kwsoft.de/" schemaLocation="BayerischeD3OMAdapterWSService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="finalizeDocumentResponse">
+    <part name="parameters" element="tns:finalizeDocumentResponse">
+    </part>
+  </message>
+  <message name="getOtherAttributesForD3XML">
+    <part name="parameters" element="tns:getOtherAttributesForD3XML">
+    </part>
+  </message>
+  <message name="createOnlineDocumentResponse">
+    <part name="parameters" element="tns:createOnlineDocumentResponse">
+    </part>
+  </message>
+  <message name="getOtherAttributesForD3XMLResponse">
+    <part name="parameters" element="tns:getOtherAttributesForD3XMLResponse">
+    </part>
+  </message>
+  <message name="finalizeDocument">
+    <part name="parameters" element="tns:finalizeDocument">
+    </part>
+  </message>
+  <message name="createOnlineDocument">
+    <part name="parameters" element="tns:createOnlineDocument">
+    </part>
+  </message>
+  <portType name="BayerischeD3OMAdapterWS">
+    <operation name="createOnlineDocument">
+      <input message="tns:createOnlineDocument" wsam:Action="http://omAdapter.bayerische.kwsoft.de/BayerischeD3OMAdapterWS/createOnlineDocumentRequest">
+    </input>
+      <output message="tns:createOnlineDocumentResponse" wsam:Action="http://omAdapter.bayerische.kwsoft.de/BayerischeD3OMAdapterWS/createOnlineDocumentResponse">
+    </output>
+    </operation>
+    <operation name="finalizeDocument">
+      <input message="tns:finalizeDocument" wsam:Action="http://omAdapter.bayerische.kwsoft.de/BayerischeD3OMAdapterWS/finalizeDocumentRequest">
+    </input>
+      <output message="tns:finalizeDocumentResponse" wsam:Action="http://omAdapter.bayerische.kwsoft.de/BayerischeD3OMAdapterWS/finalizeDocumentResponse">
+    </output>
+    </operation>
+    <operation name="getOtherAttributesForD3XML">
+      <input message="tns:getOtherAttributesForD3XML" wsam:Action="http://omAdapter.bayerische.kwsoft.de/BayerischeD3OMAdapterWS/getOtherAttributesForD3XMLRequest">
+    </input>
+      <output message="tns:getOtherAttributesForD3XMLResponse" wsam:Action="http://omAdapter.bayerische.kwsoft.de/BayerischeD3OMAdapterWS/getOtherAttributesForD3XMLResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="BayerischeD3OMAdapterWSPortBinding" type="tns:BayerischeD3OMAdapterWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="createOnlineDocument">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="finalizeDocument">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getOtherAttributesForD3XML">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="BayerischeD3OMAdapterWSService">
+    <port name="BayerischeD3OMAdapterWSPort" binding="tns:BayerischeD3OMAdapterWSPortBinding">
+      <soap:address location="http://iswasdev2.bbv.de:9086/OMAdapter/BayerischeD3OMAdapterWSService"/>
+    </port>
+  </service>
+</definitions>

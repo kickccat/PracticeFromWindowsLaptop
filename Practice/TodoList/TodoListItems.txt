@@ -1,0 +1,8 @@
+Mail birthday card	BUY A 30TH BIRTHDAY CARD FOR JOHN	25-04-2018
+Doctor's Appointment	SEE DR. SMITH AT 123 STREET	22-05-2018
+Finish design proposal for client	BLABLABLA	21-04-2018
+Pick up the book	AT A BOOKSTORE	29-04-2018
+Sing a song	KALAOKAY AT MOON	26-04-2018
+A new todo item	This is a new todo item	30-04-2018
+item test	This is a test	10-04-2018
+test 2	Another new item	20-04-2018

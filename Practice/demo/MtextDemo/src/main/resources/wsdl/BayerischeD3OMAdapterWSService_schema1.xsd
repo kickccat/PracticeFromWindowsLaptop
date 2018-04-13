@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://omAdapter.bayerische.kwsoft.de/" xmlns:tns="http://omAdapter.bayerische.kwsoft.de/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="createOnlineDocument" type="tns:createOnlineDocument"/>
+
+  <xs:element name="createOnlineDocumentResponse" type="tns:createOnlineDocumentResponse"/>
+
+  <xs:element name="finalizeDocument" type="tns:finalizeDocument"/>
+
+  <xs:element name="finalizeDocumentResponse" type="tns:finalizeDocumentResponse"/>
+
+  <xs:element name="getOtherAttributesForD3XML" type="tns:getOtherAttributesForD3XML"/>
+
+  <xs:element name="getOtherAttributesForD3XMLResponse" type="tns:getOtherAttributesForD3XMLResponse"/>
+
+  <xs:complexType name="finalizeDocument">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+      <xs:element name="docId" type="xs:string" minOccurs="0"/>
+      <xs:element name="vorlage" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="finalizeDocumentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOtherAttributesForD3XML">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOtherAttributesForD3XMLResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createOnlineDocument">
+    <xs:sequence>
+      <xs:element name="aufrufArt" type="xs:string" minOccurs="0"/>
+      <xs:element name="function" type="xs:int" minOccurs="0"/>
+      <xs:element name="dokArt" type="xs:string" minOccurs="0"/>
+      <xs:element name="vorlagenName" type="xs:string" minOccurs="0"/>
+      <xs:element name="vorlagenPfad" type="xs:string" minOccurs="0"/>
+      <xs:element name="d3_KeyArt" type="xs:string" minOccurs="0"/>
+      <xs:element name="d3_Key" type="xs:string" minOccurs="0"/>
+      <xs:element name="sachbearbeiter" type="xs:string" minOccurs="0"/>
+      <xs:element name="OE" type="xs:string" minOccurs="0"/>
+      <xs:element name="vorlagenFilter" type="xs:string" minOccurs="0"/>
+      <xs:element name="datenNachbeschaffungsKz" type="xs:string" minOccurs="0"/>
+      <xs:element name="datenNachbeschaffungsSchl&#252;ssel" type="xs:string" minOccurs="0"/>
+      <xs:element name="data_Format" type="xs:string" minOccurs="0"/>
+      <xs:element name="data" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createOnlineDocumentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:OnlineDocumentResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OnlineDocumentResult">
+    <xs:sequence>
+      <xs:element name="status" type="xs:int" minOccurs="0"/>
+      <xs:element name="errorMsg" type="xs:string" minOccurs="0"/>
+      <xs:element name="docId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
