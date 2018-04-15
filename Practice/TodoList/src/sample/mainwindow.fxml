@@ -12,7 +12,7 @@
                 <Menu text="File">
                     <MenuItem text="New..." onAction="#showNewItemDialog"/>
                     <SeparatorMenuItem/>
-                    <MenuItem text="Exit"/>
+                    <MenuItem text="Exit" onAction="#handleExit"/>
                 </Menu>
             </MenuBar>
             <ToolBar>
@@ -23,11 +23,11 @@
                         </tooltip>
                         <graphic>
                             <ImageView>
-                                <Image url="@datamodel" />
+                                <Image url="@/toolbarButtonGraphics/general/New24.gif" />
                             </ImageView>
                         </graphic>
                     </Button>
-                    <ToggleButton text="Today's Items">
+                    <ToggleButton fx:id="filterToggleButton" text="Today's Items" onAction="#handleFilterButton">
                         <tooltip>
                             <Tooltip text="Button Down: Show Today's items only. Button Up: Show all items"/>
                         </tooltip>
