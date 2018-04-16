@@ -22,7 +22,7 @@ public class DialogController {
         String shortDescription = shortDescriptionFiled.getText().trim();
         String details = detailsArea.getText().trim();
         LocalDate deadlineValue = deadlinePicker.getValue();
-    
+        
         TodoItem newItem = new TodoItem(shortDescription, details, deadlineValue);
         TodoData.getInstance().addTodoItem(newItem);
         return newItem;

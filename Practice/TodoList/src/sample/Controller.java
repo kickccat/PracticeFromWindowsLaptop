@@ -3,7 +3,6 @@ package sample;
 import javafx.application.Platform;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
@@ -60,7 +59,7 @@ public class Controller {
                 deadlineLabel.setText(timeFormatter.format(item.getDeadline()));
             }
         });
-    
+        
         wantAllItems = todoItem -> true;
         wantTodaysItem = todoItem -> todoItem.getDeadline().equals(LocalDate.now());
         filteredList = new FilteredList<>(TodoData.getInstance().getTodoItems(), wantAllItems);
@@ -180,7 +179,7 @@ public class Controller {
     }
     
     @FXML
-    public void handleExit(ActionEvent actionEvent) {
+    public void handleExit() {
         Platform.exit();
     }
 }
