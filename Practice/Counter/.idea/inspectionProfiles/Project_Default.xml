@@ -1,0 +1,9 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="SynchronizationOnLocalVariableOrMethodParameter" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="reportLocalVariables" value="true" />
+      <option name="reportMethodParameters" value="true" />
+    </inspection_tool>
+  </profile>
+</component>
