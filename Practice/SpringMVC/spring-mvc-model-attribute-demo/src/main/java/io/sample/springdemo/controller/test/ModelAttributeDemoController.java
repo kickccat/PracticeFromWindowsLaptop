@@ -94,6 +94,13 @@ public class ModelAttributeDemoController {
         modelMap.addAttribute("testData5B", anAddress.getZipCode());
         return "modelAttributeTest";
     }
+    
+    // Test 6:Testing to determine the nature of how the @ModelAttribute and @RequestMapping work with no explicit logical view name
+    @RequestMapping(value = "/modelAttributeTest")
+    @ModelAttribute("testData6")
+    public Address modelAttributeTest6() {
+        return new Address("Canberra", "2233");
+    }
 }
 
 

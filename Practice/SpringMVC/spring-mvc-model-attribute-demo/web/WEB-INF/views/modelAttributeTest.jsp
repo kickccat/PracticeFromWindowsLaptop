@@ -18,6 +18,10 @@
         <h3 style="color: #DF0101">City: ${testData5A}</h3>
         <h3 style="color: #DF0101">Zip Code: ${testData5B}</h3>
     </c:if>
+
+    <c:if test="${testData6 != null}">
+        Address relocated to: <h3 style="color: #DF0101;">${testData6.city}, ${testData6.zipCode}</h3>
+    </c:if>
 </div>
 </body>
 </html>
