@@ -75,7 +75,7 @@
         <b>${premiumService.substring(0, premiumService.length()-2)}</b>
     </h3>
 
-    <h3>Has Overseas Operations: ${orgReg.overseasOperations}</h3>
+    <h3>Has Overseas Operations: <b>${orgReg.overseasOperations}</b></h3>
 
     <h3>
         Workforce Size:
