@@ -64,6 +64,29 @@
     </h3>
 
     <h3>
+        Premium Services signed up for:
+        <c:forEach var="entry1" items="${premiumServiceList}">
+            <c:forEach var="entry2" items="${orgReg.premiumServices}">
+                <c:if test="${entry2 eq entry1.key}">
+                    <c:set var="premiumService" value="${premiumService}${entry1.value}, " scope="request"/>
+                </c:if>
+            </c:forEach>
+        </c:forEach>
+        <b>${premiumService.substring(0, premiumService.length()-2)}</b>
+    </h3>
+
+    <h3>Has Overseas Operations: ${orgReg.overseasOperations}</h3>
+
+    <h3>
+        Workforce Size:
+        <c:forEach var="entry" items="${employeeStrengthList}">
+            <c:if test="${orgReg.employeeStrength eq entry.key}">
+                <b>${entry.value}</b>
+            </c:if>
+        </c:forEach>
+    </h3>
+
+    <h3>
         Like our Website:
         <c:choose>
             <c:when test="${orgReg.like eq 'yes'}"><b>Like</b></c:when>
