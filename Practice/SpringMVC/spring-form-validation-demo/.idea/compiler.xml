@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-form-validation-demo" />
+        <module name="spring-mvc-form-validation-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-form-validation-demo" target="1.10" />
+      <module name="spring-mvc-form-validation-demo" target="1.10" />
     </bytecodeTargetLevel>
   </component>
 </project>
