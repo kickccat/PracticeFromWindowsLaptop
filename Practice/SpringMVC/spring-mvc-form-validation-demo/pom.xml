@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.sample</groupId>
-    <artifactId>spring-form-validation-demo</artifactId>
+    <artifactId>spring-mvc-form-validation-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>spring-form-validation-demo</name>
+    <name>spring-mvc-form-validation-demo</name>
 
     <build>
         <plugins>
