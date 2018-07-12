@@ -20,13 +20,13 @@ import javax.sql.DataSource;
 @ComponentScan("io.sample.springdemo")
 @EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
-
+	
 	@Autowired
 	private HeaderInterceptor headerInterceptor;
-    
-    @Autowired
-    private VisitorInterceptor visitorInterceptor;
-    
+	
+	@Autowired
+	private VisitorInterceptor visitorInterceptor;
+	
 	@Autowired
 	private ExecutionTimerInterceptor executionTimerInterceptor;
 	
@@ -36,7 +36,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		dsLookup.setResourceRef(true);
 		return dsLookup.getDataSource("jdbc/springdb");
 	}
- 
+	
 	@Bean
 	public UrlBasedViewResolver urlBasedViewResolver() {
 		UrlBasedViewResolver resolver = new UrlBasedViewResolver();
@@ -45,26 +45,26 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		resolver.setViewClass(JstlView.class);
 		return resolver;
 	}
-    
-    @Bean(name = "serviceLengthOptions")
-    public PropertiesFactoryBean mapper() {
-        PropertiesFactoryBean bean = new PropertiesFactoryBean();
-        bean.setLocation(new ClassPathResource("test/organization-values.properties"));
-        return bean;
-    }
-    
+	
+	@Bean(name = "serviceLengthOptions")
+	public PropertiesFactoryBean mapper() {
+		PropertiesFactoryBean bean = new PropertiesFactoryBean();
+		bean.setLocation(new ClassPathResource("test/organization-values.properties"));
+		return bean;
+	}
+	
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("testMvcHome");
 	}
- 
+	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(headerInterceptor);
-        registry.addInterceptor(visitorInterceptor);
+		registry.addInterceptor(visitorInterceptor);
 		registry.addInterceptor(executionTimerInterceptor).addPathPatterns("/location");
 	}
- 
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/css/test/");
