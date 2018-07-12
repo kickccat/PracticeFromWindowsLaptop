@@ -35,14 +35,14 @@ public class FormValidationDemoController {
             model.addAttribute("formErrors", result.getAllErrors());
             List<FieldError> fieldErrors = result.getFieldErrors();
             for (FieldError error : fieldErrors) {
-                LOGGER.info("field error", error.getDefaultMessage());
+                LOGGER.info("field error: " + error.getDefaultMessage());
             }
         
             List<ObjectError> objectErrors = result.getGlobalErrors();
             for (ObjectError error : objectErrors) {
-                LOGGER.info("global error", error.getDefaultMessage());
+                LOGGER.info("global error: " + error.getDefaultMessage());
             }
-    
+            
             return "test/formValidationTestViews/formValidationHome";
             
         } else {
