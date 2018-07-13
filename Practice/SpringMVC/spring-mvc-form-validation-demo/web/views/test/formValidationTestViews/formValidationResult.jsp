@@ -16,6 +16,8 @@
     <h3>Name: <b class="cb">${orgRep.firstName} ${orgRep.lastName}</b></h3>
     <h3>Age: <b class="cb">${orgRep.age}</b></h3>
     <h3>Zip Code: <b class="cb">${orgRep.zipCode}</b></h3>
+    <h3>Email: <b class="cb">${orgRep.email}</b></h3>
+    <h3>Password: <b class="cb">${orgRep.password}</b></h3>
 </div>
 <hr/>
 <div align="center">

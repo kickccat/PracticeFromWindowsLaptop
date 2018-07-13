@@ -2,12 +2,26 @@ package io.sample.springdemo.domain.test;
 
 
 import io.sample.springdemo.validation.test.AgeConstraint;
+import io.sample.springdemo.validation.test.EmailVerification;
+import io.sample.springdemo.validation.test.FieldsVerification;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+@FieldsVerification.List({
+@FieldsVerification(
+field = "email",
+fieldMatch = "verifyEmail",
+message = "* Email Addresses do not match"
+),
+@FieldsVerification(
+field = "password",
+fieldMatch = "verifyPassword",
+message = "* Passwords do not match"
+),
+})
 public class OrganizationRepresentative {
     
     @NotBlank(message = "* First Name: cannot be blank")
@@ -23,6 +37,19 @@ public class OrganizationRepresentative {
     @NotBlank(message = "* Zipcode: cannot be empty")
     @Pattern(regexp = "^[a-zA-Z0-9]{6}", message = "* Zipcode: 6 characters and/or digits only")
     private String zipCode;
+    
+    @EmailVerification(message = "* Email: is invalid")
+    @NotBlank(message = "* Email cannot be blank")
+    private String email;
+    
+    @NotBlank(message = "* Email cannot be blank")
+    private String verifyEmail;
+    
+    @NotBlank(message = "* Password cannot be blank")
+    private String password;
+    
+    @NotBlank(message = "* Password cannot be blank")
+    private String verifyPassword;
     
     public String getFirstName() {
         return firstName;
@@ -54,5 +81,37 @@ public class OrganizationRepresentative {
     
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getVerifyEmail() {
+        return verifyEmail;
+    }
+    
+    public void setVerifyEmail(String verifyEmail) {
+        this.verifyEmail = verifyEmail;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+    
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public String getVerifyPassword() {
+        return verifyPassword;
+    }
+    
+    public void setVerifyPassword(String verifyPassword) {
+        this.verifyPassword = verifyPassword;
     }
 }
