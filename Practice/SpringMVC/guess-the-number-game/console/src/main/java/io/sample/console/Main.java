@@ -1,6 +1,6 @@
 package io.sample.console;
 
-import io.sample.AppConfi;
+import io.sample.config.AppConfig;
 import io.sample.MessageGenerator;
 import io.sample.NumberGenerator;
 import org.slf4j.Logger;
@@ -16,7 +16,7 @@ public class Main {
         log.info("Guess the number game");
         
         // Context
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfi.class);
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         
         // Get number generator bean from context
         NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
