@@ -13,13 +13,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class DemoController {
     
-    DemoService service;
+    // Fields
+    private final DemoService service;
     
+    // Constructors
     @Autowired
     public DemoController(DemoService service) {
         this.service = service;
     }
     
+    // Request methods
     // http://localhost:8080/todo-list/hello
     @ResponseBody
     @GetMapping("/hello")
@@ -30,14 +33,15 @@ public class DemoController {
     // http://localhost:8080/todo-list/welcome
     @GetMapping("welcome")
     public String welcome(Model model) {
-        model.addAttribute("user", "Tim");
+        model.addAttribute("helloMessage", service.getHelloMessage("Zip"));
         log.info("model = {}", model);
         return "welcome";
     }
     
+    // Model attribute
     @ModelAttribute("welcomeMessage")
     public String welcomeMessage() {
         log.info("welcomeMessage() called");
-        return "Welcome to this Demo application";
+        return service.getWelcomeMessage();
     }
 }
