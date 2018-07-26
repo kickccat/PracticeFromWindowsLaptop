@@ -1,3 +1,5 @@
+<%--@elvariable id="welcomeMessage" type="io.sample.controller.DemoController"--%>
+<%--@elvariable id="helloMessage" type="io.sample.controller.DemoController"--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
