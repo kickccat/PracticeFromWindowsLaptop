@@ -12,6 +12,13 @@
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.3" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.0" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.0.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-core:2.3.0.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.3.0.1" />
+          <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.5" />
+          <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.7.8" />
+          <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.13" />
+          <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

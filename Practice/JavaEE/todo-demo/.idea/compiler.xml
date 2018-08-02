@@ -10,7 +10,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="todo-demo" target="10" />
+      <module name="todo-demo" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="--add-modules java.se.ee" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="todo-demo" options="" />
+    </option>
   </component>
 </project>
