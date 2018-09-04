@@ -56,9 +56,11 @@
 .m-text-thin {
     font-weight: 500 !important;
 }
+
 .m-text-spaced {
     letter-spacing: 1px !important;
 }
+
 .m-text-lined {
     line-height: 1.8;
 }
@@ -75,4 +77,42 @@
 .m-container {
     max-width: 72em;
     margin: auto;
+}
+
+/*************************Margin**********************/
+.m-margin-top-small {
+    margin-top: 0.5em;
+}
+
+.m-margin-top-normal {
+    margin-top: 1em;
+}
+
+.m-margin-top-large {
+    margin-top: 2em;
+}
+
+.m-margin-tb-min {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.m-margin-tb-tiny {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.m-margin-tb-small {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.m-margin-tb-normal {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/***********************Color**********************************/
+.m-black {
+    color: #333333;
 }

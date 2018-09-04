@@ -12,7 +12,7 @@
     <!--导航-->
     <nav class="ui inverted attached segment m-padded-tb-min">
         <div class="ui container">
-            <div class="ui inverted secondary menu">
+            <div class="ui inverted secondary stackable menu">
                 <h2 class="ui teal header item">Blog</h2>
                 <a href="#" class="item"><i class="home icon"></i>首页</a>
                 <a href="#" class="item"><i class="idea icon"></i>分类</a>
@@ -31,7 +31,10 @@
     <!--中间内容-->
     <div class="m-padded-tb-huge m-container">
         <div class="ui container">
-            <div class="ui grid">
+
+            <div class="ui stackable grid">
+
+                <!--Left side content-->
                 <div class="eleven wide column">
                     <!--Header-->
                     <div class="ui top attached segment">
@@ -49,7 +52,6 @@
                     <div class="ui attached segment">
                         <div class="ui padded vertical segment m-padded-tb-large">
                             <div class="ui grid">
-
                                 <div class="ui eleven wide column">
                                     <h3 class="ui header">从围城到围城</h3>
                                     <p class="m-text">十有五而志于学，二十弱冠，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩...</p>
@@ -75,7 +77,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="five wide column">
                                     <a href="#" target="_blank">
                                         <img src="https://picsum.photos/800/500?image=1065" alt="" class="ui rounded image">
@@ -432,31 +433,145 @@
                     </div>
 
                 </div>
+
+                <!--Right side content-->
                 <div class="five wide column">
-                    <div class="ui segment"></div>
+
+                    <!--分类-->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="idea icon"></i>分类
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <div class="ui fluid vertical menu">
+                                <a href="#" class="item">
+                                    技术文章
+                                    <div class="ui teal left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    科学之美
+                                    <div class="ui teal left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    数学之美
+                                    <div class="ui teal left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    脑洞大开
+                                    <div class="ui teal left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    我爱我家
+                                    <div class="ui teal left pointing label">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    生活艺术
+                                    <div class="ui teal left pointing label">13</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--标签-->
+                    <div class="ui segments m-margin-top-large">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="tags icon"></i>标签
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                            <a href="#" target="_blank" class="ui blue left pointing label m-margin-tb-small">
+                                世界观
+                                <div class="detail">23</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--最新推荐-->
+                    <div class="ui segments m-margin-top-large">
+                        <div class="ui secondary segment">
+                            <i class="bookmark icon"></i>最新推荐
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">世界真奇妙</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">世界真奇妙</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">世界真奇妙</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">世界真奇妙</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">世界真奇妙</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-black m-text-thin">世界真奇妙</a>
+                        </div>
+                    </div>
+
+                    <!--二维码-->
+                    <h4 class="ui horizontal divider header m-margin-top-large">
+                        扫码关注
+                    </h4>
+                    <div class="ui centered card" style="width: 120px;">
+                        <img src="static/images/WeChat.jpg" alt="" class="ui rounded image">
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
 
     <!--底部-->
     <footer class="ui inverted vertical segment m-padded-tb-max">
