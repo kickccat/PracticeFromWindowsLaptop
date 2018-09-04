@@ -1,6 +1,44 @@
+.m-padded-around-min {
+    padding: 0.2em !important;
+}
+
+.m-padded-around-tiny {
+    padding: 0.3em !important;
+}
+
 .m-padded-tb-min {
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
+}
+
+.m-padded-tb-tiny {
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+
+.m-padded-tb-small {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.m-padded-tb-normal {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.m-padded-tb-big {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+.m-padded-tb-large {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+
+.m-padded-tb-huge {
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
 }
 
 .m-padded-tb-max {
@@ -9,8 +47,14 @@
 }
 
 /***************字体****************/
+.m-text {
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
 .m-text-thin {
-    font-weight: 300 !important;
+    font-weight: 500 !important;
 }
 .m-text-spaced {
     letter-spacing: 1px !important;
@@ -21,4 +65,14 @@
 
 .m-opacity-min {
     opacity: 0.8 !important;
+}
+
+/************************Display***********************/
+.m-inline-block {
+    display: inline-block !important;
+}
+
+.m-container {
+    max-width: 72em;
+    margin: auto;
 }
