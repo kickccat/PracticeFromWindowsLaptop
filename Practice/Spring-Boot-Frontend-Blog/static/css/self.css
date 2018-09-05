@@ -1,49 +1,54 @@
+body {
+    background: url("../images/vincent-burkhead-147113-unsplash.jpg");
+    background-size: cover;
+}
+
 .m-padded-around-min {
-    padding: 0.2em !important;
+    padding: 0.2rem !important;
 }
 
 .m-padded-around-tiny {
-    padding: 0.3em !important;
+    padding: 0.3rem !important;
 }
 
 .m-padded-tb-min {
-    padding-top: 0.2em !important;
-    padding-bottom: 0.2em !important;
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
 }
 
 .m-padded-tb-tiny {
-    padding-top: 0.3em !important;
-    padding-bottom: 0.3em !important;
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
 }
 
 .m-padded-tb-small {
-    padding-top: 0.5em !important;
-    padding-bottom: 0.5em !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
 
 .m-padded-tb-normal {
-    padding-top: 1em !important;
-    padding-bottom: 1em !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
 }
 
 .m-padded-tb-big {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
 }
 
 .m-padded-tb-large {
-    padding-top: 3em !important;
-    padding-bottom: 3em !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
 }
 
 .m-padded-tb-huge {
-    padding-top: 4em !important;
-    padding-bottom: 4em !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
 }
 
 .m-padded-tb-max {
-    padding-top: 5em !important;
-    padding-bottom: 5em !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
 }
 
 /***************字体****************/
@@ -66,6 +71,10 @@
 }
 
 .m-opacity-min {
+    opacity: 0.6 !important;
+}
+
+.m-opacity-tiny {
     opacity: 0.8 !important;
 }
 
@@ -75,7 +84,7 @@
 }
 
 .m-container {
-    max-width: 72em;
+    max-width: 72rem;
     margin: auto;
 }
 
@@ -88,35 +97,35 @@
 
 /*************************Margin**********************/
 .m-margin-top-small {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
 
 .m-margin-top-normal {
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .m-margin-top-large {
-    margin-top: 2em;
+    margin-top: 2rem;
 }
 
 .m-margin-tb-min {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .m-margin-tb-tiny {
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .m-margin-tb-small {
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 .m-margin-tb-normal {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /***********************Color**********************************/
