@@ -63,7 +63,7 @@
                 </div>
 
                 <h2 class="ui center aligned header">英语面试问题总结</h2>
-                <div id="content" class="m-padded-lr m-padded-tb-large">
+                <div id="content" class="m-padded-lr-responsive m-padded-tb-large">
                     <h3>"What are your goals for the future?" or "Where do you see yourself in five years?" </h3>
                     <p></p>
                     <p>discuss your goals for returning to school or having a family, they are not relevant and could knock you out of contention for
@@ -83,22 +83,149 @@
                 </div>
 
                 <!--标签-->
-                <div class="m-padded-lr">
+                <div class="m-padded-lr-responsive">
                     <div class="ui basic teal left pointing label">面经</div>
                 </div>
 
                 <!--赞赏-->
                 <div class="ui center aligned basic segment">
-                    <button class="ui orange basic circular button">赞赏</button>
+                    <button id="paymentBtn" class="ui orange basic circular button">赞赏</button>
                 </div>
-
+                <div class="ui payQR flowing popup transition hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui small images">
+                            <div class="ui image">
+                                <img src="static/images/WeChat.jpg" alt="" class="ui rounded bordered image">
+                                <div>微信支付</div>
+                            </div>
+                            <div class="ui image">
+                                <img src="static/images/WeChat.jpg" alt="" class="ui rounded bordered image">
+                                <div>支付宝支付</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!--博客信息-->
             <div class="ui attached positive message">
-                博客信息
+                <div class="ui middle aligned grid">
+                    <!--left-->
+                    <div class="ui eleven wide column">
+                        <ul class="list">
+                            <li>作者：Joey</li>
+                            <li>发表时间：2018-09-05</li>
+                            <li>版权声明：自由转载-保持署名</li>
+                            <li>公共号转载：请在文末添加作者公众号二维码</li>
+                        </ul>
+                    </div>
+                    <!--right-->
+                    <div class="ui five wide column">
+                        <img src="static/images/WeChat.jpg" alt="" class="ui right floated rounded bordered image" style="width: 100px">
+                    </div>
+                </div>
             </div>
+
+            <!--留言区域-->
             <div class="ui bottom attached segment">
-                留言区域
+                <!--留言列表-->
+                <div class="ui teal segment">
+                    <div class="ui comments">
+                        <h3 class="ui dividing header">评论</h3>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/100/100?image=1060">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">Today at 5:42PM</span>
+                                </div>
+                                <div class="text">
+                                    How artistic!
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/100/100?image=1060">
+                            </a>
+                            <div class="content">
+                                <a class="author">Elliot Fu</a>
+                                <div class="metadata">
+                                    <span class="date">Yesterday at 12:30AM</span>
+                                </div>
+                                <div class="text">
+                                    <p>This has been very useful for my research. Thanks as well!</p>
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="https://picsum.photos/100/100?image=1060">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">Jenny Hess</a>
+                                        <div class="metadata">
+                                            <span class="date">Just now</span>
+                                        </div>
+                                        <div class="text">
+                                            Elliot you are always so right :)
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply">回复</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/100/100?image=1060">
+                            </a>
+                            <div class="content">
+                                <a class="author">Joe Henderson</a>
+                                <div class="metadata">
+                                    <span class="date">5 days ago</span>
+                                </div>
+                                <div class="text">
+                                    Dude, this is awesome. Thanks so much
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui form">
+                    <div class="field">
+                        <textarea name="content" placeholder="请写下您的看法..."></textarea>
+                    </div>
+                    <div class="fields">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickname" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="field m-margin-bottom-small m-mobile-wide">
+                            <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -149,6 +276,9 @@
         $('.menu.toggle').click(function(event) {
             event.preventDefault();
             $('.m-item').toggleClass('m-mobile-hide');
+        });
+        $('#paymentBtn').popup({
+            popup: $('.payQR.popup'), on: 'click', position: 'bottom center'
         });
     </script>
 </body>

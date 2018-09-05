@@ -75,7 +75,7 @@ p {
     padding-bottom: 5rem !important;
 }
 
-.m-padded-lr {
+.m-padded-lr-responsive {
     padding-left: 3rem;
     padding-right: 3rem;
 }
@@ -167,6 +167,10 @@ p {
     margin-bottom: 0.5rem;
 }
 
+.m-margin-bottom-small {
+    margin-bottom: 0.5em !important;
+}
+
 /***********************Color**********************************/
 .m-black {
     color: #333333;
@@ -184,5 +188,12 @@ p {
 
     .m-mobile-show {
         display: block !important;
+    }
+    .m-padded-lr-responsive {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .m-mobile-wide {
+        width: 100%;
     }
 }
