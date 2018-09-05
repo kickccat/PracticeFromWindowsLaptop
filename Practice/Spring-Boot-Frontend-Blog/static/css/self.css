@@ -3,6 +3,30 @@ body {
     background-size: cover;
 }
 
+p {
+    text-align: justify;
+}
+
+/* Basic */
+.ui.basic.green.label {
+    background: white !important;
+    color: #21ba45 !important;
+    border-color: #21ba45 !important;
+}
+
+.ui.basic.teal.label {
+    background: white !important;
+    color: teal !important;
+    border-color: teal !important;
+}
+
+.ui.basic.orange.label {
+    background: white !important;
+    color: orange !important;
+    border-color: orange !important;
+}
+
+/**********************Padding******************************/
 .m-padded-around-min {
     padding: 0.2rem !important;
 }
@@ -51,6 +75,11 @@ body {
     padding-bottom: 5rem !important;
 }
 
+.m-padded-lr {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
 /***************字体****************/
 .m-text {
     font-weight: 500;
@@ -83,7 +112,17 @@ body {
     display: inline-block !important;
 }
 
-.m-container {
+.m-container-small {
+    max-width: 60rem;
+    margin: auto;
+}
+
+.m-container-middle {
+    max-width: 68rem;
+    margin: auto;
+}
+
+.m-container-normal {
     max-width: 72rem;
     margin: auto;
 }
