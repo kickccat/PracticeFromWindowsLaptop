@@ -26,6 +26,12 @@ p {
     border-color: orange !important;
 }
 
+.ui.basic.blue.label {
+    background: white !important;
+    color: #1e70bf !important;
+    border-color: #1e70bf !important;
+}
+
 /**********************Padding******************************/
 .m-padded-around-min {
     padding: 0.2rem !important;
