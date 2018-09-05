@@ -16,8 +16,8 @@ p {
 
 .ui.basic.teal.label {
     background: white !important;
-    color: teal !important;
-    border-color: teal !important;
+    color: #00b5ad !important;
+    border-color: #00b5ad !important;
 }
 
 .ui.basic.orange.label {
@@ -153,8 +153,8 @@ p {
 }
 
 .m-margin-tb-tiny {
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
 }
 
 .m-margin-tb-small {
@@ -169,6 +169,12 @@ p {
 
 .m-margin-bottom-small {
     margin-bottom: 0.5em !important;
+}
+
+/***************************Shadow*************************************/
+.m-shadow-small {
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
 }
 
 /***********************Color**********************************/
@@ -190,10 +196,16 @@ p {
         display: block !important;
     }
     .m-padded-lr-responsive {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
     }
+
+    .m-mobile-lr-clear {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
     .m-mobile-wide {
-        width: 100%;
+        width: 100% !important;
     }
 }
