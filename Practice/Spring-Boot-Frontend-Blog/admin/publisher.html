@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../Semantic-UI/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/self.css">
+    <link rel="stylesheet" href="../static/lib/MDEditor/css/editormd.min.css">
     <title>博客发布</title>
 </head>
 <body>
@@ -72,7 +73,18 @@
                 </div>
 
                 <div class="field">
-                    <textarea name="content" id="content" cols="30" rows="10" placeholder="博客内容"></textarea>
+                    <div id="md-content" style="z-index: 1 !important;">
+                        <textarea name="content" id="content" cols="30" rows="10" placeholder="博客内容" style="display: none;">
+                            [TOC]
+                            #### Disabled options
+
+                            - TeX (Based on KaTeX);
+                            - Emoji;
+                            - Task lists;
+                            - HTML tags decode;
+                            - Flowchart and Sequence Diagram;
+                        </textarea>
+                    </div>
                 </div>
 
                 <div class="two fields">
@@ -191,10 +203,35 @@
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+
+    </script>
     <script src="../Semantic-UI/semantic.min.js"></script>
+    <script src="../static/lib/MDEditor/editormd.min.js"></script>
 
     <script>
+
+        <!--Initialize Markdown editor-->
+        var contentEditor;
+        $(function() {
+            contentEditor = editormd("md-content", {
+                width   : "100%",
+                height  : 640,
+                syncScrolling : "single",
+                path    : "../static/lib/MDEditor/lib/"
+            });
+
+            /*
+             // or
+             contentEditor = editormd({
+             id      : "test-editormd",
+             width   : "90%",
+             height  : 640,
+             path    : "../lib/"
+             });
+             */
+        });
+
         $('.menu.toggle').click(function(event) {
             event.preventDefault();
             $('.m-item').toggleClass('m-mobile-hide');
