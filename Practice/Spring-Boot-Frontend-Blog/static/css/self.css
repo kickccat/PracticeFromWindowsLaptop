@@ -164,8 +164,8 @@ p {
 }
 
 .m-margin-tb-small {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    margin-top: 0.4rem !important;
+    margin-bottom: 0.4rem !important;
 }
 
 .m-margin-tb-normal {
