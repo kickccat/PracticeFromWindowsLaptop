@@ -32,6 +32,12 @@ p {
     border-color: #1e70bf !important;
 }
 
+.ui.basic.red.label {
+    background: white !important;
+    color: #DB2828 !important;
+    border-color: #DB2828 !important;
+}
+
 /**********************Padding******************************/
 .m-padded-around-min {
     padding: 0.2rem !important;
