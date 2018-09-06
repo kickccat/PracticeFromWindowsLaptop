@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="static/css/typo.css">
     <link rel="stylesheet" href="static/css/animate.css">
     <link rel="stylesheet" href="static/lib/Prism/prism.css">
+    <link rel="stylesheet" href="static/lib/tocbot/tocbot.css">
     <link rel="stylesheet" type="text/css" href="static/css/self.css">
     <title>博客详情</title>
 </head>
@@ -67,7 +68,7 @@
 
                 <h2 class="ui center aligned header">英语面试问题总结</h2>
 
-                <div id="content" class="typo typo-selection m-padded-lr-responsive m-padded-tb-large">
+                <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
 
                     <h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
@@ -472,7 +473,7 @@ h5,h6{font-size:1em;}
             </div>
 
             <!--留言区域-->
-            <div class="ui bottom attached segment">
+            <div id="comment-container" class="ui bottom attached segment">
                 <!--留言列表-->
                 <div class="ui teal segment">
                     <div class="ui comments">
@@ -575,6 +576,22 @@ h5,h6{font-size:1em;}
         </div>
     </div>
 
+    <div class="m-padded-max m-fixed m-right-bottom">
+        <div class="ui vertical icon buttons">
+            <button type="button" class="ui toc teal button">目录</button>
+            <a href="#comment-container" type="button" class="ui teal button">留言</a>
+            <button type="button" class="ui icon button"><i class="weixin icon"></i></button>
+            <a href="#" type="button" class="ui button"><i class="chevron up icon"></i></a>
+        </div>
+    </div>
+
+    <div class="ui toc-container flowing popup transition hidden" style="width: 200px;">
+        <!--生成的目录-->
+        <ol class="js-toc">
+
+        </ol>
+    </div>
+
     <!--底部-->
     <footer class="ui inverted vertical segment m-padded-tb-max">
         <div class="ui center aligned container">
@@ -617,14 +634,29 @@ h5,h6{font-size:1em;}
             crossorigin="anonymous"></script>
     <script src="Semantic-UI/semantic.min.js"></script>
     <script src="static/lib/Prism/prism.js"></script>
+    <script src="static/lib/tocbot/tocbot.min.js"></script>
 
     <script>
         $('.menu.toggle').click(function(event) {
             event.preventDefault();
             $('.m-item').toggleClass('m-mobile-hide');
         });
+
         $('#paymentBtn').popup({
             popup: $('.payQR.popup'), on: 'click', position: 'bottom center'
+        });
+
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+        });
+
+        $('.toc.button').popup({
+            popup: $('.toc-container.popup'), on: 'click', position: 'left center'
         });
     </script>
 </body>

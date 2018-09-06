@@ -39,6 +39,38 @@ p {
 }
 
 /**********************Padding******************************/
+.m-padded-mini {
+    padding: 0.2rem !important;
+}
+
+.m-padded-tiny {
+    padding: 0.3rem !important;
+}
+
+.m-padded-small {
+    padding: 0.4rem !important;
+}
+
+.m-padded-normal {
+    padding: 0.5rem !important;
+}
+
+.m-padded-big {
+    padding: 0.6rem !important;
+}
+
+.m-padded-large {
+    padding: 0.7rem !important;
+}
+
+.m-padded-huge {
+    padding: 0.8rem !important;
+}
+
+.m-padded-max {
+    padding: 1rem !important;
+}
+
 .m-padded-around-min {
     padding: 0.2rem !important;
 }
@@ -146,6 +178,16 @@ p {
     right: 0;
 }
 
+.m-right-bottom {
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
+.m-fixed {
+    position: fixed !important;
+    z-index: 1 !important;
+}
+
 /*************************Margin**********************/
 .m-margin-top-small {
     margin-top: 0.5rem;
@@ -207,6 +249,7 @@ p {
     .m-mobile-show {
         display: block !important;
     }
+
     .m-padded-lr-responsive {
         padding-left: 0.5rem !important;
         padding-right: 0.5rem !important;
