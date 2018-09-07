@@ -592,8 +592,8 @@ h5,h6{font-size:1em;}
         </ol>
     </div>
 
-    <div class="ui WechatQR flowing popup transition hidden m-padded-small" style="width: 130px !important;">
-        <img src="static/images/WeChat.jpg" alt="" class="ui rounded image" style="width: 120px">
+    <div id="qrcode" class="ui WechatQR flowing popup transition hidden" style="width: 130px !important;">
+        <!--<img src="static/images/WeChat.jpg" alt="" class="ui rounded image" style="width: 120px">-->
     </div>
 
     <!--底部-->
@@ -635,7 +635,9 @@ h5,h6{font-size:1em;}
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
     <script src="Semantic-UI/semantic.min.js"></script>
     <script src="static/lib/Prism/prism.js"></script>
     <script src="static/lib/tocbot/tocbot.min.js"></script>
@@ -665,13 +667,13 @@ h5,h6{font-size:1em;}
         });
 
         $('.Wechat').popup({
-            popup: $('.WechatQR'), position: 'left center'
+            popup: $('.WechatQR'), on: 'hover', position: 'left center'
         });
 
-        var qrcode = new QRCode("test", {
+        var qrcode = new QRCode("qrcode", {
             text: "http://jindo.dev.naver.com/collie",
-            width: 128,
-            height: 128,
+            width: 110,
+            height: 110,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
