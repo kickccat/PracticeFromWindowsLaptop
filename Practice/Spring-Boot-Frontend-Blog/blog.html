@@ -37,7 +37,7 @@
     </nav>
 
     <!--中间内容-->
-    <div class="m-container-middle m-padded-tb-huge animated fadeIn">
+    <div id="waypoint" class="m-container-middle m-padded-tb-huge animated fadeIn">
         <div class="ui container">
             <!--头部-->
             <div class="ui top attached segment">
@@ -576,7 +576,7 @@ h5,h6{font-size:1em;}
         </div>
     </div>
 
-    <div class="m-padded-max m-fixed m-right-bottom">
+    <div id="sidebar" class="m-padded-max m-fixed m-right-bottom" style="display: none">
         <div class="ui vertical icon buttons">
             <button type="button" class="ui toc teal button">目录</button>
             <a href="#comment-container" type="button" class="ui teal button">留言</a>
@@ -642,6 +642,7 @@ h5,h6{font-size:1em;}
     <script src="static/lib/Prism/prism.js"></script>
     <script src="static/lib/tocbot/tocbot.min.js"></script>
     <script src="static/lib/QRCode/qrcode.min.js"></script>
+    <script src="static/lib/waypoints/jquery.waypoints.min.js"></script>
 
     <script>
         $('.menu.toggle').click(function(event) {
@@ -681,6 +682,18 @@ h5,h6{font-size:1em;}
 
         $('#toTopScroll').click(function() {
             $(window).scrollTo(0, 600);
+        })
+
+        var waypoint = new Waypoint({
+            element: document.getElementById('waypoint'),
+            handler: function(direction) {
+                if (direction === 'down') {
+                    $('#sidebar').show(1600);
+                } else {
+                    $('#sidebar').hide(1600);
+                }
+                console.log('Scrolled to waypoint! ' + direction);
+            }
         })
     </script>
 </body>
