@@ -581,7 +581,7 @@ h5,h6{font-size:1em;}
             <button type="button" class="ui toc teal button">目录</button>
             <a href="#comment-container" type="button" class="ui teal button">留言</a>
             <button type="button" class="ui Wechat icon button"><i class="weixin icon"></i></button>
-            <a href="#" type="button" class="ui button"><i class="chevron up icon"></i></a>
+            <div id="toTopScroll" class="ui icon button"><i class="chevron up icon"></i></div>
         </div>
     </div>
 
@@ -678,6 +678,10 @@ h5,h6{font-size:1em;}
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H
         });
+
+        $('#toTopScroll').click(function() {
+            $(window).scrollTo(0, 600);
+        })
     </script>
 </body>
 </html>
