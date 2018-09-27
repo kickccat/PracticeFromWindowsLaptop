@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class KnuthMorrisPrattTest {
     
     private KnuthMorrisPratt kmp = null;
@@ -23,6 +21,10 @@ class KnuthMorrisPrattTest {
     
         actual = kmp.computeLSPTable(new char[]{'a', 'a', 'b', 'a', 'c'});
         expect = new int[]{0, 1, 0, 1, 0};
+        Assertions.assertArrayEquals(expect, actual);
+        
+        actual = kmp.computeLSPTable(new char[]{'a', 'b', 'c', 'd', 'a', 'b', 'c', 'a'});
+        expect = new int[]{0, 0, 0, 0, 1, 2, 3, 1};
         Assertions.assertArrayEquals(expect, actual);
     }
 }
