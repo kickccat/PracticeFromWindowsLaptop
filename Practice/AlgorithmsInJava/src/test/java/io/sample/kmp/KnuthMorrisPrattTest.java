@@ -27,4 +27,13 @@ class KnuthMorrisPrattTest {
         expect = new int[]{0, 0, 0, 0, 1, 2, 3, 1};
         Assertions.assertArrayEquals(expect, actual);
     }
+    
+    @Test
+    void search() {
+        String array = "abazacabababac";
+        String pattern = "ababac";
+    
+        int index = kmp.search(array.toCharArray(), pattern.toCharArray());
+        Assertions.assertEquals(8, index);
+    }
 }
