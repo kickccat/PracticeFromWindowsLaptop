@@ -1,6 +1,6 @@
 package io.sample.euclid;
 
-public class Euclid {
+class Euclid {
     
     /**
      * Implementation using recursion
@@ -9,7 +9,7 @@ public class Euclid {
      * @param divisor
      * @return
      */
-    public int gcd(int number, int divisor) {
+    int gcd(int number, int divisor) {
         int remaining = number % divisor;
         
         if (remaining != 0) {
@@ -26,7 +26,7 @@ public class Euclid {
      * @param divisor
      * @return
      */
-    public int gcd2(int number, int divisor) {
+    int gcd2(int number, int divisor) {
         while (divisor != 0) {
             int temp = divisor;
             divisor = number % divisor;
