@@ -4,11 +4,14 @@ package io.sample.rabinkarp;
  * Rabin-Karp Algorithm
  * Using rolling hash function to compare the hashcode between pattern and array
  */
-public class RabinKarp {
+class RabinKarp {
     
     private final int prime = 3;
     
     int search(char[] array, char[] pattern) {
+        if (array == null || pattern == null) {
+            return -1;
+        }
         int n = array.length;
         int m = pattern.length;
         int lastChar = n - m;
@@ -26,7 +29,7 @@ public class RabinKarp {
         return -1;
     }
     
-    private boolean match(char[] array, char[] pattern, int index) {
+    boolean match(char[] array, char[] pattern, int index) {
         for (int i = 0; i < pattern.length; i++) {
             if (array[index + i] != pattern[i]) {
                 return false;
@@ -35,14 +38,14 @@ public class RabinKarp {
         return true;
     }
     
-    private long recalculateHash(long oldHash, char oldChar, char newChar, int hashSize) {
+    long recalculateHash(long oldHash, char oldChar, char newChar, int hashSize) {
         long hash = oldHash - charVal(oldChar);
         hash /= prime;
         hash += charVal(newChar) * Math.pow(prime, hashSize - 1);
         return hash;
     }
     
-    private long calculateHash(char[] text, int hashSize) {
+    long calculateHash(char[] text, int hashSize) {
         long hash = 0;
         for (int i = 0; i < hashSize; i++) {
             hash += charVal(text[i]) * Math.pow(prime, i);
@@ -50,7 +53,7 @@ public class RabinKarp {
         return hash;
     }
     
-    private int charVal(char c) {
+    int charVal(char c) {
         return c - 96;
     }
 }
